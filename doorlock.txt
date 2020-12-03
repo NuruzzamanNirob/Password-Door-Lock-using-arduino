@@ -4,7 +4,7 @@
 #include <Servo.h>
 Servo myservo;
 LiquidCrystal lcd(A0, A1, A2, A3, A4, A5);
-int pos = 0;    // variable to store the servo position
+int pos = 0;
 char Data[Password_Lenght];
 char Master[Password_Lenght] = "123456";
 byte data_count = 0, master_count = 0;
@@ -82,7 +82,7 @@ void Open()
     Data[data_count] = customKey;
     lcd.setCursor(data_count, 1);
     lcd.print(Data[data_count]);
-    data_count++; // increment data array by 1 to store new char, also keep track of the number of chars entered
+    data_count++;
   }
   if (data_count == Password_Lenght - 1)
   {
